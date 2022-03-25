@@ -2,15 +2,15 @@ import React from 'react';
 import './Flower.css'
 
 const Flower = (props) => {
-    console.log(props.flower)
-    const {name,picture,price} = props.flower
+    const { name, picture, price } = props.flower
+    const { addHandleClick } = props
     return (
         <div>
             <div className='flower-container'>
-            <img src={picture} alt="" />
-            <h2 >{name}</h2>
-            <h3 >{price}</h3>
-            <button>Add me</button>
+                <img src={picture} alt="" />
+                <h2 >{name}</h2>
+                <h3 >{price}</h3>
+                <button onClick={() => addHandleClick(props.flower)}>Add me</button>
             </div>
         </div>
     );

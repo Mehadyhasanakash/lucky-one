@@ -1,9 +1,18 @@
 .grid-container{
     display: grid;
     grid-template-columns: 4fr 1fr;
+    
 }
 .grid-flower{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    position: relative;
+}
+.flower-right-side{
+    background-color: rgb(159, 207, 251);
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
 }
