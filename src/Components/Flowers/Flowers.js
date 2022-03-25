@@ -1,8 +1,15 @@
 
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Flowers = () => {
+
+    const [flowers, setFlowers] = useState([])
+    useEffect(()=>{
+        fetch('data.json')
+        .then(res => res.json())
+        .then(data => console.log(data));
+    } ,[])
     return (
         <div className='container'>
             <h1 className='text-success text-center mt-5'>"Life is the flower for which love is honey"</h1>
