@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FlowerCalculation = ({card}) => {
-    const {name}=card
+const FlowerCalculation = (props) => {
+    const {name}=props.card
     return (
         <div>
             <h1>{name}</h1>

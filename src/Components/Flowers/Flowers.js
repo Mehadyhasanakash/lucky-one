@@ -1,5 +1,6 @@
 
 
+import { Alert } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Flower from '../Flower/Flower';
 import FlowerCalculation from '../FlowerCalculation/FlowerCalculation';
@@ -9,6 +10,7 @@ const Flowers = () => {
 
     const [flowers, setFlowers] = useState([])
     const [cards, setCard] = useState([])
+    const [value,SetValue] = useState([]);
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -18,8 +20,15 @@ const Flowers = () => {
     const addHandleClick = (flower) => {
         const newFlower = [...cards, flower]
         setCard(newFlower)
+        if(newFlower.length >=5){
+            alert('do not have choose')
+        }
     }
+    const randomClick = (card)=>{
+        const newValue = [Math.random() * card]
+        SetValue(newValue)
 
+    }
 
     return (
         <div className='flowers-container'>
@@ -39,8 +48,12 @@ const Flowers = () => {
             <div className='flower-calculation'>
             <h1>Choose your flower</h1>
                 {
-                    cards.map(card => <FlowerCalculation key={card.id} card={card}></FlowerCalculation>)
+                    cards.map(card => <FlowerCalculation
+                        key={card.id}
+                        card={card}
+                    ></FlowerCalculation>)
                 }
+                <button onClick={()=>randomClick(value)}>choose flower</button>
             
             </div>
 
