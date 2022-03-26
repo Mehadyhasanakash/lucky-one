@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Flower from '../Flower/Flower';
+import FlowerCalculation from '../FlowerCalculation/FlowerCalculation';
 import './Flowers.css'
 
 const Flowers = () => {
@@ -36,10 +37,11 @@ const Flowers = () => {
 
 
             <div className='flower-calculation'>
-               <h1>Choose you flower</h1>
-               {
-                cards.map(card => <h1>{card.name}</h1>)
-               }
+                <h1>Choose your Flower</h1>
+                {
+                    cards.map(card => <FlowerCalculation key={card.id}>card={card}</FlowerCalculation>)
+                }
+            
             </div>
 
 
