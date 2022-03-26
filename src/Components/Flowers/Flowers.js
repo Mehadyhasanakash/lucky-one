@@ -21,6 +21,7 @@ const Flowers = () => {
         const newFlower = [...cards, flower]
         setCard(newFlower)
         if(newFlower.length >=5){
+            setCard(cards)
             alert('do not have choose')
         }
     }
