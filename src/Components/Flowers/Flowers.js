@@ -7,6 +7,8 @@ const Flowers = () => {
 
     const [flowers, setFlowers] = useState([])
     const [cards, setCard] = useState([])
+    const [random, setRandom] = useState([]);
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -21,11 +23,20 @@ const Flowers = () => {
             alert('do not have choose')
         }
     }
+  const randomProduct = () => {
+    let item = cards[Math.floor(Math.random() * cards.length)];
+    setRandom(item)
+    if(item >= cards ){
+     setRandom('')
+    }
+  }
+
+  
     
     return (
-        <div className='flowers-container'>
+        <div className='row flowers-container'>
 
-            <div className='flowers-grid'>
+            <div className='flowers-grid col-sm-6'>
                 {
                     flowers.map(flower => <Flower
                         key={flower.id}
@@ -36,9 +47,8 @@ const Flowers = () => {
                 }
             </div>
 
-
-            <div className='flower-calculation'>
-             <FlowerCalculation cards={cards}></FlowerCalculation>
+            <div className='flower-calculation col-sm-6'>
+             <FlowerCalculation key={cards.id} cards={cards} random={random.name} randomHendle ={randomProduct}></FlowerCalculation>
                 
             
             </div>
