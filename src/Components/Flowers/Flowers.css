@@ -17,3 +17,13 @@
     padding: 20px;
     color: rgb(3, 3, 3);
 }
+.button{
+    background-color: rgb(3, 37, 110);
+    color: rgb(255, 234, 0);
+    border: none;
+    font-size: 20px;
+}
+.button:hover{
+    background-color: brown;
+    color: white;
+}
