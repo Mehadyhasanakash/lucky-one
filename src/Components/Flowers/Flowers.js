@@ -7,7 +7,7 @@ import './Flowers.css'
 const Flowers = () => {
 
     const [flowers, setFlowers] = useState([])
-    const [card, setCard] = useState([])
+    const [cards, setCard] = useState([])
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -15,7 +15,7 @@ const Flowers = () => {
     }, [])
 
     const addHandleClick = (flower) => {
-        const newFlower = [...card, flower]
+        const newFlower = [...cards, flower]
         setCard(newFlower)
     }
 
@@ -23,8 +23,8 @@ const Flowers = () => {
     return (
         <div className='flowers-container'>
 
-             <div className='flowers-grid'>
-             {
+            <div className='flowers-grid'>
+                {
                     flowers.map(flower => <Flower
                         key={flower.id}
                         flower={flower}
@@ -32,17 +32,20 @@ const Flowers = () => {
 
                     ></Flower>)
                 }
-             </div>
+            </div>
 
 
-             <div className='flower-calculation'>
-                 <h1>this is me</h1>
-             </div>
+            <div className='flower-calculation'>
+               <h1>Choose you flower</h1>
+               {
+                cards.map(card => <h1>{card.name}</h1>)
+               }
+            </div>
 
 
-               </div>
-             
-    
+        </div>
+
+
     );
 };
 
