@@ -29,6 +29,10 @@ const Flowers = () => {
     setCard([random])
     
   }
+  const deletButonn = ()=>{
+      setRandom([])
+      
+  }
 
 
   
@@ -48,7 +52,7 @@ const Flowers = () => {
             </div>
 
             <div className='flower-calculation col-sm-6'>
-             <FlowerCalculation key={cards.id} cards={cards} random={random.name} randomHendle ={randomProduct}></FlowerCalculation>
+             <FlowerCalculation key={cards.id} cards={cards} random={random.name} randomHendle ={randomProduct} deletButonn={deletButonn}></FlowerCalculation>
                 
             
             </div>
