@@ -8,10 +8,12 @@ const Flower = (props) => {
         <div>
             <div className='flower-container'>
                 <img src={picture} alt="" />
-                <h2 >{name}</h2>
-                <h3 >{price}</h3>
-                <button onClick={() => addHandleClick(props.flower)}>Add me</button>
+                <h2 className='text-center' >{name}</h2>
+                <h3 className='text-center' >{price}</h3>
+                <button className='btn-Click' onClick={() => addHandleClick(props.flower)}>Buy Now</button>
             </div>
+
+        
         </div>
     );
 };

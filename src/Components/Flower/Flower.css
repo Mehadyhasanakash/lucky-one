@@ -1,5 +1,20 @@
-
 .flower-container img{
-width: 400px;
-height: 300px;
+    width: 300px;
+    margin: 50px;
 }
+.flower-container{
+    border: 2px solid slategrey;
+    background-color: antiquewhite;
+}
+
+.btn-Click{
+    width: 100%;
+    border: none;
+    background-color: rgb(255, 174, 174);
+    font-size: 25px;
+}
+.btn-Click:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
