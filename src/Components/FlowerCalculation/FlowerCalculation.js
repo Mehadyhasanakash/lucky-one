@@ -13,7 +13,7 @@ const FlowerCalculation = (props) => {
             <h1 className='p-3 mb-2 bg-danger text-white'>{random}</h1>
             <button onClick={()=> randomHendle()} className='button'>Choose your flower</button> <br /> <br />
 
-            <button className='button'>clear all dat</button>
+            <button className='button'>clear all data</button>
 
         </div>
     );

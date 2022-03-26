@@ -26,10 +26,10 @@ const Flowers = () => {
   const randomProduct = () => {
     let item = cards[Math.floor(Math.random() * cards.length)];
     setRandom(item)
-    if(item >= cards ){
-     setRandom('')
-    }
+    setCard([random])
+    
   }
+
 
   
     
