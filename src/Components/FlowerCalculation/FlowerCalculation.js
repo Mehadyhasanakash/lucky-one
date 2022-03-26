@@ -1,9 +1,10 @@
 import React from 'react';
 
-const FlowerCalculation = (props) => {
+const FlowerCalculation = ({card}) => {
+    const {name}=card
     return (
         <div>
-            <h1>Choose your flower</h1>
+            <h1>{name}</h1>
         </div>
     );
 };

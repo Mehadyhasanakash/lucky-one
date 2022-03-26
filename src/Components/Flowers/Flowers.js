@@ -37,9 +37,9 @@ const Flowers = () => {
 
 
             <div className='flower-calculation'>
-                <h1>Choose your Flower</h1>
+            <h1>Choose your flower</h1>
                 {
-                    cards.map(card => <FlowerCalculation key={card.id}>card={card}</FlowerCalculation>)
+                    cards.map(card => <FlowerCalculation key={card.id} card={card}></FlowerCalculation>)
                 }
             
             </div>
